@@ -23,6 +23,15 @@ export default function Preloader({ name = "PORTFOLIO" }: PreloaderProps) {
   useIsomorphicLayoutEffect(() => {
     if (hidden) return;
 
+    try {
+      if (sessionStorage.getItem("preloader-seen")) {
+        setHidden(true);
+        return;
+      }
+    } catch {
+      /* storage blocked */
+    }
+
     const root = rootRef.current!;
     const counter = { val: 0 };
     let loadComplete = false;
@@ -131,6 +140,9 @@ export default function Preloader({ name = "PORTFOLIO" }: PreloaderProps) {
       const exitTl = gsap.timeline({
         onComplete: () => {
           document.documentElement.style.overflow = "";
+          try {
+            sessionStorage.setItem("preloader-seen", "1");
+          } catch {}
           setHidden(true);
         },
       });
