@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/theme/appConstants";
 import ThemeProvider from "@/components/layout/themeProvider";
+import Preloader from "@/components/sections/preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +25,19 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
-        </body>
+        <ThemeProvider>
+          <Preloader name="NEERAJ KUKRETI" />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
