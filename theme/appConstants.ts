@@ -18,3 +18,30 @@ export const AppConstant = {
   profession:"Frontend Developer",
   headingButtonTitle:"Let's Build"
 }
+
+export const skills = [
+  "JavaScript",
+  "TypeScript",
+  "Core Java",
+  "React.js",
+  "Next.js",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "React Native",
+  "Redux Toolkit",
+  "Redux-Saga",
+  "TanStack Query",
+  "Zustand",
+  "REST APIs",
+  "WebSocket",
+  "Stream SDK",
+  "Firebase Authentication",
+  "Push Notifications (FCM)",
+  "Stripe",
+  "Stripe Terminal",
+  "Git",
+  "GitHub",
+  "Postman",
+  "VS Code",
+];
