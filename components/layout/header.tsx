@@ -1,11 +1,9 @@
 import { AppConstant } from "@/theme/appConstants";
-import ScrollBarProgress from "../ui/scrollBarProgress";
 
 const Header = () => {
   return (
-    <header className="sticky z-10 top-0 h-fit">
+    <header className="sticky z-10 top-0 h-16">
       {/* scroll indicator progress bar */}
-      <ScrollBarProgress />
       <nav className="flex items-center justify-between bg-frost/70 px-6 py-3 backdrop-blur-xl sm:px-10">
         {/* name and professional */}
         <div className="flex items-center gap-2">
