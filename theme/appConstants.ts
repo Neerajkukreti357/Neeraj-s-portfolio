@@ -12,3 +12,9 @@ export const SITE = {
     linkedin: "https://linkedin.com/in/your-username",
   },
 } as const;
+
+export const AppConstant = {
+  nameOfDeveloper:"Neeraj Kukreti",
+  profession:"Frontend Developer",
+  headingButtonTitle:"Let's Build"
+}

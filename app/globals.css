@@ -58,6 +58,9 @@
   --color-sky: var(--sky);
   --color-cyan: var(--icecyan);
   --color-violet: var(--violet);
+
+  --text-2xs: 10px;
+  --text-3xs: 11px;
 }
 
 /* ---------- LIGHT THEME (default) ---------- */
@@ -163,6 +166,12 @@
   --sidebar-ring: oklch(0.65 0.19 260);
 }
 
+@keyframes fr-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+.fr-pulse { animation: fr-pulse 2.6s ease-in-out infinite; }
+
 /* ---------- Base styles ---------- */
 @layer base {
   * {
@@ -178,5 +187,11 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply hidden transition-colors hover:text-deep;
   }
 }
