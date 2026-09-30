@@ -1,5 +1,5 @@
 const About = () => {
-    return <section className="h-screen">
+    return <section className="h-[calc(100vh-4rem)]">
 
     </section>
 }
