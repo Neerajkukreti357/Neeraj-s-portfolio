@@ -183,7 +183,7 @@
   0%, 100% { transform: translateX(-2px) translateY(0); }
   50% { transform: translateX(3px) translateY(-1px); }
 }
-.fr-marquee { animation: fr-marquee 100s linear infinite; }
+.fr-marquee { animation: fr-marquee 100s linear 3s infinite; }
 .fr-float { animation: fr-float 9s ease-in-out 4s infinite; }
 .fr-pulse { animation: fr-pulse 2.6s ease-in-out infinite; }
 

@@ -31,13 +31,13 @@ export function useHeroScrollAnimation({ section, panel, marquee }: Refs) {
           scrollTrigger: {
             trigger: section.current,
             start: () => `top ${getHeaderHeight()}px`,
-            end: "+=70%",
+            end: "+=100%",
             scrub: 0.5,
             pin: true,
             invalidateOnRefresh: true,
             snap: {
               snapTo: [0, 1],
-              duration: { min: 0.4, max: 0.8 },
+              duration: { min: 3, max: 4 },
               delay: 0.05,
               ease: "power2.out",
             },
@@ -65,11 +65,11 @@ export function useHeroScrollAnimation({ section, panel, marquee }: Refs) {
       });
 
       // exit का उल्टा: बाहर से अंदर आओ
-      intro.from(exitEls, { x: "-150vw", opacity: 0, stagger: 0.08, duration: 0.7 }, 0);
-      intro.from(chars, { x: "-150vw", opacity: 0, stagger: 0.006, duration: 0.9 }, 0.05);
-      intro.from(panelItems, { x: "100vw", opacity: 0, stagger: 0.15, duration: 0.8 }, 0.1);
-      intro.from(panel.current, { scale: 0.6, opacity: 0, duration: 0.8 }, 0.3);
-      intro.from(marquee.current, { opacity: 0, duration: 0.6 }, 0.6);
+      intro.from(exitEls, { x: "-150vw", opacity: 0, stagger: 0.08, duration: 0.9 }, 0);
+      intro.from(chars, { x: "-150vw", opacity: 0, stagger: 0.006, duration: 1 }, 0.05);
+      intro.from(panelItems, { x: "100vw", opacity: 0, stagger: 0.15, duration: 1.8 }, 0.1);
+      intro.from(panel.current, { scale: 0.6, opacity: 0, duration: 0.8 }, 1.3);
+      intro.from(marquee.current, { opacity: 0, duration: 0.6 }, 1.6);
     }, section);
 
     return () => ctx.revert();
