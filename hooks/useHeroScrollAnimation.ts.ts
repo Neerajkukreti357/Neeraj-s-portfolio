@@ -31,7 +31,7 @@ export function useHeroScrollAnimation({ section, panel, marquee }: Refs) {
           scrollTrigger: {
             trigger: section.current,
             start: () => `top ${getHeaderHeight()}px`,
-            end: "+=100%",
+            end: "+=70%",
             scrub: 0.5,
             pin: true,
             invalidateOnRefresh: true,
