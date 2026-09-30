@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[calc(100dvh-4rem)] flex flex-col overflow-hidden"
+      className="relative h-[calc(100dvh-4rem)]  flex flex-col overflow-hidden"
     >
       <div className="flex-1 px-6 pt-16 pb-16 sm:px-10 sm:pt-28 sm:pb-24">
         <div className="mx-auto grid max-w-300 items-center  lg:grid-cols-[1.05fr_0.85fr]">
