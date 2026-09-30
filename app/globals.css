@@ -178,17 +178,13 @@
   0%, 100% { opacity: 0.35; transform: scale(1); }
   50% { opacity: 1; transform: scale(1.4); }
 }
-@keyframes theme-wash {
-  0% { clip-path: circle(0% at calc(100% - 68px) 32px); opacity: 1; }
-  70% { clip-path: circle(150% at calc(100% - 68px) 32px); opacity: 1; }
-  100% { clip-path: circle(150% at calc(100% - 68px) 32px); opacity: 0; }
-}
+
 @keyframes cloud-drift {
   0%, 100% { transform: translateX(-2px) translateY(0); }
   50% { transform: translateX(3px) translateY(-1px); }
 }
 .fr-marquee { animation: fr-marquee 100s linear infinite; }
-.fr-float { animation: fr-float 9s ease-in-out infinite; }
+.fr-float { animation: fr-float 9s ease-in-out 4s infinite; }
 .fr-pulse { animation: fr-pulse 2.6s ease-in-out infinite; }
 
 /* ---------- Base styles ---------- */
